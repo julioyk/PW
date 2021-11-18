@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Lista de Shows
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-searchbar [(ngModel)] ="busca" (ionChange)="filtrar()"></ion-searchbar>
+
+<ion-content [fullscreen]="true">
+  <div class="ion-padding">
+    <ion-list>
+      <ion-item routerLink="/detalhes/{{show.id}}" *ngFor="let show of listaShow">
+        <ion-avatar item-left *ngIf="show.image != null">
+          <img src="{{show.image.original}}">
+        </ion-avatar>
+        <h2>{{show.name}}</h2>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>

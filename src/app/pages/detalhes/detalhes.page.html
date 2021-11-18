@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar color = light>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title color=primary><h2>{{nome}}</h2></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-img src="{{imagem}}"></ion-img>
+    <ion-item [innerHTML] = summary></ion-item>
+    <ion-item> {{qtdSessoes}} Temporadas</ion-item>
+  </ion-list>
+</ion-content>
